@@ -22,7 +22,7 @@ public class MessageConsumer {
     }
 
     @KafkaListener(topics = "${user.topic}", groupId = "${spring.kafka.consumer.group-id}")
-    public void consumer(String message) {
+    public void listen(String message) {
         log.info("Message received: {}", message);
         UserModel userModel = gson.fromJson(message, UserModel.class);
         UserEntity userEntity = mapToEntity(userModel);
