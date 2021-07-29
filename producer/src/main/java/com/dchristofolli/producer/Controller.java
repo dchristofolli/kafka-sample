@@ -1,7 +1,5 @@
 package com.dchristofolli.producer;
 
-import com.dchristofolli.producer.user.UserModel;
-import com.dchristofolli.producer.user.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

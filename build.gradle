@@ -12,7 +12,7 @@ dependencies {
 }
 bootJar.enabled(false)
 
-subprojects {
+allprojects {
     apply plugin: 'org.springframework.boot'
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
@@ -28,6 +28,7 @@ subprojects {
         implementation 'com.google.code.gson:gson:2.8.7'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         testImplementation 'org.springframework.kafka:spring-kafka-test'
+        testImplementation 'org.testcontainers:kafka:1.15.3'
     }
 
     test {

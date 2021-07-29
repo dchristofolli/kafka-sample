@@ -1,19 +1,19 @@
-package com.dchristofolli.producer.user;
+package com.dchristofolli.producer;
 
 import com.google.gson.Gson;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserProducer {
-    private final KafkaTemplate<Object, String> kafkaTemplate;
+public class MessageProducer {
+    private final KafkaTemplate<Integer, String> kafkaTemplate;
     private final Gson gson = new Gson();
 
-    public UserProducer(KafkaTemplate<Object, String> kafkaTemplate) {
+    public MessageProducer(KafkaTemplate<Integer, String> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
 
     public void send(UserModel user) {
-        kafkaTemplate.send("user_topic", gson.toJson(user));
+        kafkaTemplate.send("user_topic",user.hashCode(), gson.toJson(user));
     }
 }

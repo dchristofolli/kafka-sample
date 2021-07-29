@@ -1,7 +1,7 @@
 spring:
   kafka:
     producer:
-      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       acks: 1
       compression-type: gzip

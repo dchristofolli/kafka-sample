@@ -1,12 +1,12 @@
-package com.dchristofolli.producer.user;
+package com.dchristofolli.producer;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    private final UserProducer producer;
+    private final MessageProducer producer;
 
-    public UserService(UserProducer producer) {
+    public UserService(MessageProducer producer) {
         this.producer = producer;
     }
 

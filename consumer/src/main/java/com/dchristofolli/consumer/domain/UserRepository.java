@@ -1,6 +1,5 @@
-package com.dchristofolli.consumer.user;
+package com.dchristofolli.consumer.domain;
 
-import com.dchristofolli.consumer.domain.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package com.dchristofolli.consumer.user;
+package com.dchristofolli.consumer.dto;
 
 import java.util.Objects;
 

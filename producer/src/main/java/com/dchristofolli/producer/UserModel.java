@@ -1,4 +1,4 @@
-package com.dchristofolli.producer.user;
+package com.dchristofolli.producer;
 
 public class UserModel {
     private String name;
