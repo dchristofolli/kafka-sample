@@ -1,4 +1,4 @@
-package com.dchristofolli.consumer.domain;
+package com.dchristofolli.kafkasample.consumer.domain;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;

@@ -1,4 +1,4 @@
-package com.dchristofolli.producer;
+package com.dchristofolli.kafkasample.producer;
 
 import org.springframework.stereotype.Service;
 

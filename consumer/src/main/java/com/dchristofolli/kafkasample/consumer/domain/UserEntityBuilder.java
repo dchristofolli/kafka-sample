@@ -1,4 +1,4 @@
-package com.dchristofolli.consumer.domain;
+package com.dchristofolli.kafkasample.consumer.domain;
 
 public class UserEntityBuilder {
     private Long id;

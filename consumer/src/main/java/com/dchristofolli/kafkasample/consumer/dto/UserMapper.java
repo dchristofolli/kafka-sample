@@ -1,7 +1,7 @@
-package com.dchristofolli.consumer.dto;
+package com.dchristofolli.kafkasample.consumer.dto;
 
-import com.dchristofolli.consumer.domain.UserEntity;
-import com.dchristofolli.consumer.domain.UserEntityBuilder;
+import com.dchristofolli.kafkasample.consumer.domain.UserEntity;
+import com.dchristofolli.kafkasample.consumer.domain.UserEntityBuilder;
 
 public class UserMapper {
     public static UserEntity mapToEntity(UserModel user){

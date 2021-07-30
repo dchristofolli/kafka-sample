@@ -1,6 +1,7 @@
-package com.dchristofolli.producer;
+package com.dchristofolli.kafkasample.producer;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -13,7 +14,7 @@ public class Controller {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public void createUser(@RequestBody UserModel model) {
         service.sendUser(model);
     }

@@ -1,12 +1,15 @@
-package com.dchristofolli.producer;
+package com.dchristofolli.kafkasample.producer;
 
 public class UserModel {
-    private final String name;
-    private final String email;
+    private String name;
+    private String email;
 
     public UserModel(String name, String email) {
         this.name = name;
         this.email = email;
+    }
+
+    public UserModel() {
     }
 
     @Override

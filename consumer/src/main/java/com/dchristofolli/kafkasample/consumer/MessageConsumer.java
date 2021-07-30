@@ -1,8 +1,9 @@
-package com.dchristofolli.consumer;
+package com.dchristofolli.kafkasample.consumer;
 
-import com.dchristofolli.consumer.domain.UserEntity;
-import com.dchristofolli.consumer.domain.UserRepository;
-import com.dchristofolli.consumer.dto.UserModel;
+import com.dchristofolli.kafkasample.consumer.domain.UserEntity;
+import com.dchristofolli.kafkasample.consumer.domain.UserRepository;
+import com.dchristofolli.kafkasample.consumer.dto.UserModel;
+import com.dchristofolli.kafkasample.consumer.dto.UserMapper;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,8 +11,6 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Component;
-
-import static com.dchristofolli.consumer.dto.UserMapper.mapToEntity;
 
 @Component
 public class MessageConsumer {
@@ -29,7 +28,7 @@ public class MessageConsumer {
                        String message) {
         log.info("key: {}, timestamp: {}, message: {}", key, timestamp, message);
         UserModel userModel = gson.fromJson(message, UserModel.class);
-        UserEntity userEntity = mapToEntity(userModel);
+        UserEntity userEntity = UserMapper.mapToEntity(userModel);
         repository.save(userEntity);
     }
 }

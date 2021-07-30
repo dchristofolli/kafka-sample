@@ -1,10 +1,11 @@
 package com.dchristofolli.kafkasample;
 
-import com.dchristofolli.consumer.MessageConsumer;
-import com.dchristofolli.consumer.domain.UserRepository;
-import com.dchristofolli.producer.MessageProducer;
-import com.dchristofolli.producer.UserModel;
+import com.dchristofolli.kafkasample.consumer.MessageConsumer;
+import com.dchristofolli.kafkasample.consumer.domain.UserRepository;
+import com.dchristofolli.kafkasample.producer.MessageProducer;
+import com.dchristofolli.kafkasample.producer.UserModel;
 import org.junit.ClassRule;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
@@ -42,6 +42,10 @@ class KafkaSampleTest {
     @BeforeAll
     static void setup() {
         kafka.start();
+    }
+    @AfterAll
+    static void shutdown(){
+        kafka.stop();
     }
 
     @Test

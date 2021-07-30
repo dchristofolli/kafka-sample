@@ -1,7 +1,6 @@
-package com.dchristofolli.consumer;
+package com.dchristofolli.kafkasample.consumer;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication

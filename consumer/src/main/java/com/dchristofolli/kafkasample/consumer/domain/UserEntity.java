@@ -1,4 +1,4 @@
-package com.dchristofolli.consumer.domain;
+package com.dchristofolli.kafkasample.consumer.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

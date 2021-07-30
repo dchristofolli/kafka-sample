@@ -1,4 +1,4 @@
-package com.dchristofolli.producer;
+package com.dchristofolli.kafkasample.producer;
 
 import com.google.gson.Gson;
 import org.springframework.kafka.core.KafkaTemplate;

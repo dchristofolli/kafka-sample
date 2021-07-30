@@ -1,4 +1,4 @@
-package com.dchristofolli.consumer.dto;
+package com.dchristofolli.kafkasample.consumer.dto;
 
 import java.util.Objects;
 
