@@ -3,18 +3,13 @@ package com.dchristofolli.consumer.dto;
 import java.util.Objects;
 
 public class UserModel {
-    private String message;
-    private String name;
-    private String email;
+    private final String name;
+    private final String email;
 
     public UserModel(String name, String email) {
         this.name = name;
         this.email = email;
     }
-    public UserModel(String message) {
-        this.message = message;
-    }
-
 
     @Override
     public String toString() {

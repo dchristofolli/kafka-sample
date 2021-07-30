@@ -1,8 +1,8 @@
 package com.dchristofolli.producer;
 
 public class UserModel {
-    private String name;
-    private String email;
+    private final String name;
+    private final String email;
 
     public UserModel(String name, String email) {
         this.name = name;
@@ -15,22 +15,6 @@ public class UserModel {
             "name='" + name + '\'' +
             ", email='" + email + '\'' +
             '}';
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     @Override
