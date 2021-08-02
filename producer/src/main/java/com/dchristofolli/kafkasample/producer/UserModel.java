@@ -1,15 +1,12 @@
 package com.dchristofolli.kafkasample.producer;
 
 public class UserModel {
-    private String name;
-    private String email;
+    private final String name;
+    private final String email;
 
     public UserModel(String name, String email) {
         this.name = name;
         this.email = email;
-    }
-
-    public UserModel() {
     }
 
     @Override
@@ -25,5 +22,13 @@ public class UserModel {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

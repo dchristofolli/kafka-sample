@@ -12,6 +12,9 @@ import org.springframework.kafka.support.KafkaHeaders;
 import org.springframework.messaging.handler.annotation.Header;
 import org.springframework.stereotype.Component;
 
+import java.sql.Timestamp;
+import java.time.Instant;
+
 @Component
 public class MessageConsumer {
     private final Logger log = LoggerFactory.getLogger(MessageConsumer.class);
@@ -26,7 +29,8 @@ public class MessageConsumer {
     public void listen(@Header(KafkaHeaders.RECEIVED_MESSAGE_KEY) Integer key,
                        @Header(KafkaHeaders.RECEIVED_TIMESTAMP) Long timestamp,
                        String message) {
-        log.info("key: {}, timestamp: {}, message: {}", key, timestamp, message);
+        log.info("key: {}, timestamp: {}, message: {}",
+            key, new Timestamp(timestamp).toInstant(), message);
         UserModel userModel = gson.fromJson(message, UserModel.class);
         UserEntity userEntity = UserMapper.mapToEntity(userModel);
         repository.save(userEntity);
