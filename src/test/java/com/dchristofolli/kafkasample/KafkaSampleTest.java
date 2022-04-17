@@ -55,8 +55,8 @@ class KafkaSampleTest {
 
     @Test
     void send() {
-        UserModel userModel = new UserModel("daniel", "daniel@ilia.digital");
-        String userJson = "{\"name\":\"daniel\",\"email\":\"daniel@ilia.digital\"}";
+        UserModel userModel = new UserModel("daniel", "daniel@test.com");
+        String userJson = "{\"name\":\"daniel\",\"email\":\"daniel@test.com\"}";
         Mockito.doNothing().when(consumer).listen(1, 1L, "message");
         producer.send(userModel);
         kafkaTemplate.send("user_topic", userJson);

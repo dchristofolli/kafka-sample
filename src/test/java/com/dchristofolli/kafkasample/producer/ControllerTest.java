@@ -36,7 +36,7 @@ class ControllerTest {
 
     @Test
     void createUser() throws Exception {
-        String userJson = "{\"name\":\"daniel\",\"email\":\"daniel@ilia.digital\"}";
+        String userJson = "{\"name\":\"daniel\",\"email\":\"daniel@test.com\"}";
         mockMvc.perform(MockMvcRequestBuilders.post("/users")
             .contentType(MediaType.APPLICATION_JSON)
             .content(userJson))
