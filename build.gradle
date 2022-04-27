@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.5.3'
+    id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
@@ -28,7 +28,7 @@ allprojects {
         implementation 'com.google.code.gson:gson:2.9.0'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         testImplementation 'org.springframework.kafka:spring-kafka-test'
-        testImplementation 'org.testcontainers:kafka:1.16.3'
+        testImplementation 'org.testcontainers:kafka:1.17.1'
     }
 
     test {

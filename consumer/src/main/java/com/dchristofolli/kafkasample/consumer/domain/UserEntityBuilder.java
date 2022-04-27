@@ -1,11 +1,11 @@
 package com.dchristofolli.kafkasample.consumer.domain;
 
 public class UserEntityBuilder {
-    private Long id;
+    private String id;
     private String name;
     private String email;
 
-    public UserEntityBuilder setId(Long id) {
+    public UserEntityBuilder setId(String id) {
         this.id = id;
         return this;
     }

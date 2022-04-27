@@ -11,9 +11,6 @@ public class UserModel {
         this.email = email;
     }
 
-    public UserModel() {
-    }
-
     @Override
     public String toString() {
         return "UserModel{" +
@@ -38,5 +35,13 @@ public class UserModel {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (email != null ? email.hashCode() : 0);
         return result;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
