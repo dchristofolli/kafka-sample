@@ -3,7 +3,7 @@ package com.dchristofolli.kafkasample.consumer.domain;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
-@Document(collection = "USER")
+@Document(collection = "usersDB")
 public class UserEntity {
     @MongoId
     private String id;
