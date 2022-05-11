@@ -11,6 +11,9 @@ public class UserModel {
         this.email = email;
     }
 
+    public UserModel() {
+    }
+
     @Override
     public String toString() {
         return "UserModel{" +
