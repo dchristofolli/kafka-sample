@@ -3,7 +3,7 @@ package com.dchristofolli.kafkasample;
 import com.dchristofolli.kafkasample.consumer.MessageConsumer;
 import com.dchristofolli.kafkasample.consumer.domain.UserRepository;
 import com.dchristofolli.kafkasample.producer.MessageProducer;
-import com.dchristofolli.kafkasample.producer.UserModel;
+import com.dchristofolli.kafkasample.producer.ProducerUserModel;
 import org.junit.ClassRule;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
@@ -55,10 +55,10 @@ class KafkaSampleTest {
 
     @Test
     void send() {
-        UserModel userModel = new UserModel("daniel", "daniel@test.com");
+        ProducerUserModel producerUserModel = new ProducerUserModel("daniel", "daniel@test.com");
         String userJson = "{\"name\":\"daniel\",\"email\":\"daniel@test.com\"}";
         Mockito.doNothing().when(consumer).listen(1, 1L, "message");
-        producer.send(userModel);
+        producer.send(producerUserModel);
         kafkaTemplate.send("user_topic", userJson);
         consumer.listen(1, 1L, "message");
         Mockito.verify(consumer).listen(1, 1L, "message");

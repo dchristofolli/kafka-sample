@@ -1,7 +1,7 @@
 package com.dchristofolli.kafkasample.consumer;
 
 import com.dchristofolli.kafkasample.consumer.domain.UserRepository;
-import com.dchristofolli.kafkasample.consumer.dto.UserModel;
+import com.dchristofolli.kafkasample.consumer.dto.ConsumerUserModel;
 import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.sql.Timestamp;
 
-import static com.dchristofolli.kafkasample.consumer.dto.UserMapper.mapToEntity;
+import static com.dchristofolli.kafkasample.consumer.mapper.UserMapper.mapToEntity;
 
 @Component
 public class MessageConsumer {
@@ -30,7 +30,7 @@ public class MessageConsumer {
                        String message) {
         log.info("key: {}, timestamp: {}, message: {}",
             key, new Timestamp(timestamp).toInstant(), message);
-        var userModel = gson.fromJson(message, UserModel.class);
+        var userModel = gson.fromJson(message, ConsumerUserModel.class);
         repository.save(mapToEntity(userModel));
     }
 }

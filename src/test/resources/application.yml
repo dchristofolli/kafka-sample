@@ -1,4 +1,4 @@
-user.topic: user_topic
+user.topic: test_topic
 server:
   port: 8081
 spring:

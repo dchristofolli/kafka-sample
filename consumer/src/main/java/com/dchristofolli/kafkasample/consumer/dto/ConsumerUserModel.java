@@ -2,18 +2,18 @@ package com.dchristofolli.kafkasample.consumer.dto;
 
 import java.util.Objects;
 
-public class UserModel {
+public class ConsumerUserModel {
     private final String name;
     private final String email;
 
-    public UserModel(String name, String email) {
+    public ConsumerUserModel(String name, String email) {
         this.name = name;
         this.email = email;
     }
 
     @Override
     public String toString() {
-        return "UserModel{" +
+        return "ConsumerUserModel{" +
             "name='" + name + '\'' +
             ", email='" + email + '\'' +
             '}';
@@ -24,10 +24,10 @@ public class UserModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        UserModel userModel = (UserModel) o;
+        ConsumerUserModel consumerUserModel = (ConsumerUserModel) o;
 
-        if (!Objects.equals(name, userModel.name)) return false;
-        return Objects.equals(email, userModel.email);
+        if (!Objects.equals(name, consumerUserModel.name)) return false;
+        return Objects.equals(email, consumerUserModel.email);
     }
 
     public String getName() {

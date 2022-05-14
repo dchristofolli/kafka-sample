@@ -16,7 +16,7 @@ public class MessageProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void send(UserModel user) {
+    public void send(ProducerUserModel user) {
         logger.info("Sending user: {}", user);
         kafkaTemplate.send("user_topic", user.hashCode(), gson.toJson(user));
     }

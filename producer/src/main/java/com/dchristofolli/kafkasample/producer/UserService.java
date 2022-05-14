@@ -10,7 +10,7 @@ public class UserService {
         this.producer = producer;
     }
 
-    public void sendUser(UserModel model) {
+    public void sendUser(ProducerUserModel model) {
         producer.send(model);
     }
 }
