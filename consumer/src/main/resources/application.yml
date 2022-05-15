@@ -1,0 +1,14 @@
+user.topic: user_topic
+server:
+  port: 8081
+spring:
+  kafka:
+    consumer:
+      group-id: user-group
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      bootstrap-servers: localhost:9092
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/kafka-sample
