@@ -15,7 +15,7 @@ public class Controller {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void createUser(@RequestBody UserModel model) {
+    public void createUser(@RequestBody ProducerUserModel model) {
         service.sendUser(model);
     }
 }

@@ -1,4 +1,4 @@
-user.topic: user_topic
+user.topic: test_topic
 server:
   port: 8081
 spring:
@@ -8,7 +8,6 @@ spring:
       key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       bootstrap-servers: localhost:9092
-
   data:
     mongodb:
       uri: mongodb://localhost:27017/kafka-sample

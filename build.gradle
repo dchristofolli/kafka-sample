@@ -29,6 +29,7 @@ allprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         testImplementation 'org.springframework.kafka:spring-kafka-test'
         testImplementation 'org.testcontainers:kafka:1.17.1'
+        testImplementation 'io.sicredi.kafka-assured:kafka-assured:0.6.0'
     }
 
     test {

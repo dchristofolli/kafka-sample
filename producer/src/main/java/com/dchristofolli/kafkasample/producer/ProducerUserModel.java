@@ -2,21 +2,21 @@ package com.dchristofolli.kafkasample.producer;
 
 import java.util.Objects;
 
-public class UserModel {
+public class ProducerUserModel {
     private String name;
     private String email;
 
-    public UserModel(String name, String email) {
+    public ProducerUserModel(String name, String email) {
         this.name = name;
         this.email = email;
     }
 
-    public UserModel() {
+    public ProducerUserModel() {
     }
 
     @Override
     public String toString() {
-        return "UserModel{" +
+        return "ProducerUserModel{" +
             "name='" + name + '\'' +
             ", email='" + email + '\'' +
             '}';
@@ -27,10 +27,10 @@ public class UserModel {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        UserModel userModel = (UserModel) o;
+        ProducerUserModel producerUserModel = (ProducerUserModel) o;
 
-        if (!Objects.equals(name, userModel.name)) return false;
-        return Objects.equals(email, userModel.email);
+        if (!Objects.equals(name, producerUserModel.name)) return false;
+        return Objects.equals(email, producerUserModel.email);
     }
 
     @Override
@@ -46,5 +46,13 @@ public class UserModel {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
