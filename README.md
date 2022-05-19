@@ -6,7 +6,7 @@
 - [IntelliJ](https://www.jetbrains.com/pt-br/idea/download/)
 
 ## Running
-In order to have Kafka and MongoDB running, we must run: </br>
+In order to have Kafka running, we must run: </br>
 docker-compose up -d </br>
 ### Producer Module
 Right click and "Run" java/com/dchristofolli/kafkasample/producer/ProducerApplication.java
@@ -21,4 +21,6 @@ List docker containers -> docker ps | grep confluentinc/cp-kafka:latest </br>
 Access kafka container bash -> docker exec -it -w /bin {container id} bash </br>
 Listen Kafka topic -> kafka-console-consumer --topic user_topic --from-beginning --bootstrap-server kafka:9092
 
-### [Query Mongo Collection](http://localhost:8088/db/kafka-sample/usersDB)
+### Query Mongo Collection
+Find all documents in usersDB collection:</br>
+db.usersDB.find({});

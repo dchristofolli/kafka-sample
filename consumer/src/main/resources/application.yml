@@ -11,4 +11,4 @@ spring:
 
   data:
     mongodb:
-      uri: mongodb://localhost:27017/kafka-sample
+      uri: mongodb+srv://mongodb:Ikdk1chGxkFEHvoa@cluster0.e10w7.gcp.mongodb.net/kafka-sample?retryWrites=true&w=majority
